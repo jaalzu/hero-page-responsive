@@ -202,7 +202,7 @@ main .btn__hero .span-2 {
     display: none;
     border: 1px solid gainsboro;
     position: absolute;
-    right: -10%;
+    right: -25%;
     top: 75%;
     gap: 1.5rem;
     flex-direction: column;
@@ -238,7 +238,7 @@ main .btn__hero .span-2 {
     margin-left: 0.8rem;
   }
   main .hero__text {
-    margin-top: 7rem;
+    margin-top: 0rem;
     margin-left: 2rem;
   }
   main .hero__text .p-1 {
