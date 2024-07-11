@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+  <header id="header" class="header">
+    <div class="bg-grey"></div>
+    <nav class="nav " id="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <img src="images/icon-hamburger.svg" alt="" id="btn-open" class="hidden" onclick="showElement()">
+      <img src="images/icon-close.svg" alt="" id="btn-close" class="square hidden" onclick="hideElement()">
+      <ul class="nav__list" id="nav-list">
+        <li class="nav__item">
+            <a href="">
+              Product
+            </a>
+          </li>
+        <li class="nav__item">
+            <a href="">
+              Features
+            </a>
+          </li>
+        <li class="nav__item">
+            <a href="">
+              Pricing
+            </a>
+          </li>
+        <li class="nav__item ">
+            <a href="" class="login">
+              Login
+            </a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  
+<main class="main">
+  <div class="hero__img">
+    <img src="images/illustration-devices.svg" alt="">
+  </div>
+  <div class="hero__text">
+    <p class="p-1"><span class="span-1">New</span>Monograph Dashboard</p>
+    <h1>
+      Powerful insights into your team
+    </h1>
+    <p class="p-2">
+      Project planning and time tracking for agile teams
+    </p>
+    <div class="btn__hero">
+
+      <button class="btn">
+        Schedule a demo
+      </button>
+      <span class="span-2">
+        to see a preview
+      </span>
+    </div>
+  </div>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>

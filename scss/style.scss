@@ -1,0 +1,325 @@
+@use 'variables' as *;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-height: 100vh;
+    background-color:#fff;
+    overflow: hidden;
+}
+
+.hidden{
+    display: none;
+}
+
+//****************************** HEADER ****************************************//
+
+.header{
+    font-family: $ff-barlow-condensed;
+    min-width: 100vw;
+    position: relative;
+        .bg-grey{
+            position: fixed;
+            right: 0;
+            width: 725px;
+            background-color: $color-white;
+            opacity: 1;
+            height: 420px;
+            z-index: 1;
+            border-bottom-left-radius: 34%;
+        }
+
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 3rem;
+            padding-inline: 11.50rem;
+            width: 100%;
+            .logo{
+                margin-left: 4rem;
+            }
+            
+            .nav__list{
+                z-index: 100;
+                text-transform: uppercase;
+                display: flex;
+                list-style: none;
+                gap: 2.4rem;
+                
+                
+                li a{
+                        font-size: $fs;
+                        color: $color-dark-blue;
+                        text-decoration: none;
+                        font-weight: 650;
+                        cursor: pointer;
+                        z-index: 100;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .login{
+                        color: $color-light-gray;
+                        margin-left: 3rem;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            cursor: auto;
+                            position: absolute;
+                            width: 5px;
+                            border-radius: 50%;
+                            height: 5px;
+                            color: $color-gray;
+                            opacity: .5;
+                            background-color: $color-light-gray;
+                            left: -140%;
+                            top: 40%;
+                        }
+                    }
+
+
+            }
+        }
+}
+
+
+//****************************** HERO SECTION ****************************************//
+
+
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    margin-top: 4rem;
+    .hero__img{
+        margin-right: -270px;
+        z-index: 100;
+        max-width: 100%;
+    }
+            .hero__text{
+                margin-top: 4rem;
+                display: flex;
+                flex-direction: column;
+                font-family: $ff-barlow;
+                align-items: start;
+                margin-left: 15.3rem;
+
+                .p-1{
+                    color: $color-light-gray;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    letter-spacing: 6px;
+                    text-transform: uppercase;
+                    margin-bottom: 1.1rem;
+                    font-family: $ff-barlow-condensed;
+
+                    .span-1{
+                        color: #fff;
+                        letter-spacing: 1px;
+                        font-family: $ff-barlow-condensed;
+                        font-weight: 700;
+                        background-color: black;
+                        border-radius: 30px;
+                        padding: .230rem .8rem;
+                        margin-right: 1.2rem;
+                    }
+                }
+
+                h1{
+                    text-transform: uppercase;
+                        font-size: 5rem;
+                        font-family: $ff-barlow-condensed;
+                        color: $color-dark-blue;
+                    width: 80%;
+                    line-height: 1;
+                }
+
+                .p-2{
+                    color: rgba(85, 85, 85, 0.467);
+                    font-weight: 450;
+                    margin-top: 2rem;
+                    font-size: 1.130rem;
+                    width: 35%;
+                    margin-bottom: 4rem;
+                    font-family: $ff-barlow;
+                }
+            }
+            .btn__hero{
+                gap: 1.4rem;
+                display: flex;
+                align-items: center;
+                .btn{
+                    display: block;
+                    background-color: $color-red;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-family: $ff-barlow-condensed;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    border: 1px solid rgb(219, 27, 27);
+                    border-radius: 4px;
+                    outline: none;
+                    color: #fff;
+                    padding: .8rem 2.2rem;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+
+                .span-2{
+                    color: rgb(157, 157, 157);
+                    text-transform: uppercase;
+                    font-family: $ff-barlow-condensed;
+                    letter-spacing: 4px;
+                    font-size: .9rem;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+            }
+}
+
+
+
+
+
+
+
+
+//****************************** MEDIA QUERYS ****************************************//
+
+
+@media screen and (max-width:780px){
+
+    .hidden{
+        display: block;
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    .square{
+        display: none;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+
+    .header{
+
+        .bg-grey{
+            width: 230px;
+            height: 500px;
+
+        }
+
+        #nav{
+            padding-inline: 1rem;
+            .logo{
+                margin-left: 1rem;
+            }
+            #btn-open{
+                width: 30px;
+                margin-right: 1rem;
+            }
+            #btn-close{
+                width: 30px;
+                margin-right: 1rem;
+            }
+
+            .nav__list{
+                display: none;
+
+                border: 1px solid gainsboro;
+                position: absolute;
+                right: 7%;
+                top: 75%;
+                gap: 1.5rem;
+                flex-direction: column;
+                background-color: #fff;
+                z-index: 10000;
+                align-items: center;
+                width: 85%;
+                padding-block: 2rem;
+                li a{
+                    font-size: 1.4rem;
+                }
+                .login{
+                    display: block;
+                    margin-top: 2rem;
+                    margin-left: 0rem;
+
+                    &::before{
+                        width: 600%;
+                        border-radius: 0px;
+                        top: -100%;
+                        height: 1px;
+                        left: -250%;
+                        opacity: .4;
+
+                    }
+                }
+            }
+        }
+    }
+  
+
+
+    main{
+        overflow: hidden;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        .hero__img img{
+            max-width: 135%;
+            margin-left: .8rem;
+        }
+
+        .hero__text{
+            margin-top: 7rem;
+            margin-left: 2rem;
+
+            .p-1{
+                font-size: 1.1rem;
+
+                .span-1{
+                    font-size: 1.1rem;
+                }
+            }
+            h1{
+                font-size: 3rem;
+                width: 100%;
+                margin-bottom: -.5rem;
+            }
+
+            .p-2{
+                font-size: 1.3rem;
+                line-height: 1.4;
+                width: 80%;
+                margin-bottom: 2.2rem;
+            }
+
+            .btn__hero{
+                .btn{
+                    font-size: 1.1rem;
+                }
+
+                .span-2{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    
+}
+
+
