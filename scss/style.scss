@@ -96,6 +96,7 @@ body{
 
 main{
     display: flex;
+    gap: 5rem;
     justify-content: space-evenly;
     flex-direction: row-reverse;
     margin-top: 4rem;
@@ -138,12 +139,12 @@ main{
                         font-size: 5rem;
                         font-family: $ff-barlow-condensed;
                         color: $color-dark-blue;
-                    width: 80%;
+                    width: 100%;
                     line-height: 1;
                 }
 
                 .p-2{
-                    color: rgba(85, 85, 85, 0.467);
+                    color: rgba(72, 72, 72, 0.614);
                     font-weight: 450;
                     margin-top: 2rem;
                     font-size: 1.130rem;
